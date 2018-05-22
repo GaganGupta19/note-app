@@ -3,6 +3,7 @@ console.log('Starting app.js');
 const fs = require('fs');
 const os = require('os');
 const notes = require('./notes');
+const _ = require('lodash');
 
 //console.log(notes.addNote());
 console.log(notes.addNumbers(9, -2));
