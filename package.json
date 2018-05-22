@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GaganGupta19/note-app/issues"
   },
-  "homepage": "https://github.com/GaganGupta19/note-app#readme"
+  "homepage": "https://github.com/GaganGupta19/note-app#readme",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
 }
