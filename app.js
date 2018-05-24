@@ -21,9 +21,15 @@ if(command === 'add') {
 } else if(command === 'list') {
     notes.getAll();
 } else if(command === 'read'){
-    notes.getNote(argv.title);
+    let note = notes.getNote(argv.title);
+    if(note){
+        console.log(note);
+    }else{
+        console.log('Not found');
+    }
 } else if(command === 'remove') {
-    notes.removeNote(argv.title);
-} else{
+    notes.removeNote(argv.title) ? console.log('Removed Successfully') : console.log('Title not found');
+}
+else{
     console.log('Default');
 }
