@@ -12,7 +12,12 @@ let command = argv._[0];
 console.log(command);
 
 if(command === 'add') {
-    notes.addNote(argv.title, argv.body);
+    let note = notes.addNote(argv.title, argv.body);
+    if(_.isEmpty(note)){
+        console.log('Already Exists');
+    }else{
+        console.log('Note Added');
+    }
 } else if(command === 'list') {
     notes.getAll();
 } else if(command === 'read'){
