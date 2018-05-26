@@ -19,7 +19,12 @@ if(command === 'add') {
         console.log('Note Added');
     }
 } else if(command === 'list') {
-    notes.getAll();
+    let allNotes = notes.getAll();
+    if(allNotes){
+        console.log(allNotes);
+    }else{
+        console.log('Notes not found');
+    }
 } else if(command === 'read'){
     let note = notes.getNote(argv.title);
     if(note){
